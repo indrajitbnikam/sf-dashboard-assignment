@@ -1,0 +1,135 @@
+.notifications-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 34px;
+
+  .section-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #131E40;
+    width: 100%;
+    text-align: left;
+
+    margin-bottom: 13px;
+
+    .count {
+      margin-left: 8px;
+
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 150%;
+      color: #212a4a80;
+    }
+  }
+
+  .notification-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 16px;
+
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 800px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .notification-card {
+      background-color: #FFFFFF;
+      border: 1px solid #F3F5F9;
+      box-sizing: border-box;
+      border-radius: 6px;
+      box-shadow: 0px 1px 2px rgba(90, 97, 163, 0.12);
+      padding: 24px 24px 20px 24px;
+
+      display: flex;
+      flex-direction: column;
+
+      .info {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 16px;
+
+        .image {
+          img {
+            border-radius: 50%;
+            height: 56px;
+            width: 56px;
+          }
+
+          svg {
+            border-radius: 50%;
+            height: 56px;
+            width: 56px;
+          }
+        }
+
+        .text-info {
+          margin-left: 16px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          .action-name {
+            font-size: 18px;
+            line-height: 150%;
+            font-weight: 600;
+            color: #212B4C;
+          }
+          .username {
+            font-size: 16px;
+            line-height: 150%;
+            font-weight: 500;
+            color: #A5ADC6;
+            margin-bottom: 9px;
+          }
+          .time-to-expire {
+            font-size: 13px;
+            line-height: 19px;
+            font-weight: 500;
+            color: #A5ADC6;
+          }
+        }
+      }
+
+      .actions {
+        display: flex;
+
+        .action {
+          height: 36px;
+          width: 130px;
+          display: grid;
+          place-items: center;
+
+          border: 2px solid #ECF0F4;
+          box-sizing: border-box;
+          border-radius: 4px;
+
+          font-size: 14px;
+          line-height: 150%;
+          font-weight: 600;
+          color: #212B4C;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &:not(:last-of-type) {
+            margin-right: 16px;
+          }
+
+          &.primary {
+            background: linear-gradient(0deg, #F9FAFC, #F9FAFC), #FFFFFF;
+          }
+
+          &.secondary {
+            background: #FFF;
+          }
+        }
+      }
+    }
+  }
+}

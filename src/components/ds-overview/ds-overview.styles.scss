@@ -1,0 +1,80 @@
+.ds-overview-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 34px;
+
+  .section-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #131E40;
+    width: 100%;
+    text-align: left;
+
+    margin-bottom: 13px;
+  }
+
+  .overview-cards-grid {
+    display: grid;
+    grid-gap: 16px;
+
+    grid-template-areas:
+    "first  second third"
+    "fourth fourth fourth";
+
+    @media screen and (max-width: 500px) {
+      grid-template-areas:
+        "first"
+        "second"
+        "third"
+        "fourth";
+    }
+
+    .overview-card {
+      background-color: #f9fafc;
+      border: 1px solid #ecf0f4;
+      border-radius: 6px;
+      padding: 32px;
+
+      display: flex;
+      flex-direction: column;
+
+      &.first { grid-area: first; }
+      &.second { grid-area: second; }
+      &.third { grid-area: third; }
+      &.fourth {
+        grid-area: fourth;
+        padding: 0;
+      }
+
+      &.clickable {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .primary-text {
+        font-size: 24px;
+        line-height: 24px;
+        color: #131E40;
+        margin-bottom: 16px;
+      }
+
+      .secondary-text {
+        font-size: 14px;
+        line-height: 14px;
+        color: #a5adc6;
+      }
+
+      .view-more-text {
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 600;
+        color: #212b4c;
+        margin: 6px 0;
+        text-align: center;
+      }
+    }
+  }
+}

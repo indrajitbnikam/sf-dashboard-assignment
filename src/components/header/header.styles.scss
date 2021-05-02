@@ -1,0 +1,104 @@
+.header {
+  height: 71px;
+
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid #ecf0f4;
+
+  @media screen and (max-width: 600px) {
+    flex-wrap: wrap;
+    height: 121px;
+  }
+
+  .left {
+    width: 20%;
+    height: 71px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .company-name {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 30px;
+      color: #131E40;
+      margin-left: 32px;
+
+      @media screen and (max-width: 600px) {
+        margin-left: 0;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .center {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1200px) {
+      width: 80%;
+      justify-content: flex-end;
+      margin-right: 32px;
+    }
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      justify-content: center;
+      height: 50px;
+      margin-right: 0;
+    }
+
+    .links {
+      height: 100%;
+    }
+
+    .link {
+      height: 100%;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+
+      display: inline-grid;
+      place-items: center;
+
+      color: #a5adc6;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 48px;
+
+        @media screen and (max-width: 800px) {
+          margin-right: 24px;
+        }
+      }
+
+      &.active {
+        color: #212b4c;
+
+        border-bottom: 3px solid #131E40;
+      }
+    }
+  }
+
+  .right {
+    width: 20%;
+
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
+}

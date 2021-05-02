@@ -1,0 +1,72 @@
+.dashboard {
+  flex-grow: 1;
+  align-self: center;
+
+  display: flex;
+  width: 100%;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+
+  .primary-view {
+    width: 66%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+
+    @media screen and (max-width: 1300px) {
+      padding: 20px;
+    }
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+      align-items: center;
+    }
+    @media screen and (max-width: 600px) {
+      padding-top: 40px;
+    }
+
+    .primary-view-subcontainer {
+      width: 100%;
+      max-width: 760px; // 800 - 40(margin)
+
+      @media screen and (max-width: 1200px) {
+        max-width: 800px;
+      }
+
+    }
+  }
+
+  .secondary-view {
+    width: 34%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+
+    @media screen and (max-width: 1300px) {
+      padding: 20px;
+    }
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+      align-items: center;
+    }
+
+    background: linear-gradient(180deg, #F9FAFC 15.84%, #FFFFFF 68.86%);
+
+    .secondary-view-subcontainer {
+      width: 100%;
+      max-width: 360px; // 800 - 40(margin)
+
+      @media screen and (max-width: 1200px) {
+        max-width: 800px;
+      }
+      @media screen and (max-width: 800px) {
+        max-width: 400px;
+      }
+    }
+  }
+}
